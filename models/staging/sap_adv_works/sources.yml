@@ -1,0 +1,117 @@
+version: 2
+
+#To Do: inserir descrições e testes para as tabelas das categorias production, purchasing e sales.
+#Existem mais testes em stagings/stagings.yml
+
+sources: 
+  - name: sap
+    description: Principais dados do erp (SAP) da Adventure Works.
+    schema: dbt_adv_works
+    tables: 
+      - name: salesorderheader
+        description: tabela com cabeçalho pedido de vendas
+        columns:
+          - name: salesorderid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderheadersalesreason
+        description: tabela com id de motivo de vendas
+        columns:
+          - name: salesorderid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: tabela com detalhes de cartão de credito
+        columns:
+          - name: creditcardid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: tabela de clientes
+        columns:
+          - name: customerid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: tabela detalhes do pedido de vendas
+        columns:
+          - name: salesorderid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: address
+        description: tabela de endereços
+        columns:
+          - name: addressid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: stateprovinceid
+        description: tabela de provincias
+        columns:
+          - name: creditcardid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: businessentityid
+        description: tabela de lojas
+        columns:
+          - name: creditcardid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: salesreason
+        description: tabela de motivos
+        columns:
+          - name: salesreasonid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: person
+        description: tabela de pessoas
+        columns:
+          - name: businessentityid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: product
+        description: tabela de produtos
+        columns:
+          - name: productid
+            description: chave principal
+            tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: tabela de cidades
+        columns:
+          - name: countryregioncode
+            description: chave principal
+            tests:
+              - unique
+              - not_null
