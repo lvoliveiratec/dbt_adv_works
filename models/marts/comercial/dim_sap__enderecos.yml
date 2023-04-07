@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_sap__enderecos
+    columns:
+      - name: endereco_sk
+        description: Chave substituta para o `id_endereco`.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_endereco
+        description: Chave primária da tabela de origem `address`.
+      
+      - name: id_estado
+        description: Chave do estado.
+
+      - name: cidade
+        description: Nome da cidade.
+      
+      - name: codego_estado
+        description: Código do estado.
+
+      - name: nome_estado
+        description: Nome do estado.
+
+      - name: codego_regiao
+        description: Id do território do estado.
+
+      - name: nome_pais
+        description: Nome do país.

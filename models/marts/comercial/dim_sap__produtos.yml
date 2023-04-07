@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_sap__produtos
+    columns:
+      - name: sk_produto
+        description: Chave substituta para o `id_produto`.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_produto
+        description: Chave primária da tabela de origem `product`.
+
+      - name: nome_produto
+        description: Nome do produto.
+      
+      - name: numero_produto
+        description: código do produto.

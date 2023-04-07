@@ -62,19 +62,19 @@ sources:
               - unique
               - not_null
 
-      - name: stateprovinceid
+      - name: stateprovince
         description: tabela de provincias
         columns:
-          - name: creditcardid
+          - name: stateprovinceid
             description: chave principal
             tests:
               - unique
               - not_null
 
-      - name: businessentityid
+      - name: store
         description: tabela de lojas
         columns:
-          - name: creditcardid
+          - name: businessentityid
             description: chave principal
             tests:
               - unique

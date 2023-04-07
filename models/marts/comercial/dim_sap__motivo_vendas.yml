@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_sap__motivo_vendas
+    columns:
+      - name: sk_motivo_vendas
+        description: Chave substituta para o `id_vendas`.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_vendas
+        description: Chave primária da tabela de origem `sales_reason`.
+
+      - name: nome
+        description: Descrição do motivo da compra.
+      
+      - name: tipo_motivo
+        description: Descrição do tipo do motivo da compra.
